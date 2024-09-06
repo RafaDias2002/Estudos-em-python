@@ -1,34 +1,31 @@
 import random
-import sys
 
-for _ in range(10)
+for _ in range(10):
     nove_digitos = ''
     for i  in range(9):
         nove_digitos += str(random.randint(0,9))
-    
+
+
     contador_regressivo = 10
-    
-    
+
+
     resultado =  0
     for digito in nove_digitos:
         resultado += int(digito) * contador_regressivo
         contador_regressivo -= 1
     digito = (resultado * 10) % 11
     digito = digito if digito <= 9 else 0
-    
+
     dez_digitos = nove_digitos + str(digito)
     contador_regressivo2 = 11
-    
+
     resultado2 = 0 
     for digito in dez_digitos:
         resultado2 += int(digito) * contador_regressivo2
         contador_regressivo2 -= 1
-        digito2 = (resultado2 * 10) % 11
-        digito2 = digito2 if digito2 <= 9 else 0
-    
-    cpf_gerado = f'{nove_digitos}{digito}{digito2}' 
-    if cpf_enviado == cpf_gerado:
-        print(f'{cpf_enviado} é valido')
-    else:
-        print('CPF invalido')    
-  
+    digito2 = (resultado2 * 10) % 11
+    digito2 = digito2 if digito2 <= 9 else 0
+
+    cpf_gerado = f'{nove_digitos}{digito}{digito2}'
+
+    print(cpf_gerado)
